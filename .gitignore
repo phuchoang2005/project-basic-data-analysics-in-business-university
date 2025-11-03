@@ -68,11 +68,3 @@ htmlcov/
 # Bỏ qua các file hệ thống
 .DS_Store
 Thumbs.db
-
-#skip image
-*.jpg
-*.png
-
-
-#skip model file
-*.joblib
