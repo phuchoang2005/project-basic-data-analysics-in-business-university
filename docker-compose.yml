@@ -1,0 +1,12 @@
+services:
+  project-data-analytics-app:
+    build: .
+    container_name: project-analytics-app
+    ports:
+      - ${main_container_port}:8888
+    volumes:
+      - ./code:/home/code
+    environment:
+      - PYSPARK_PYTHON=python3
+      - PYSPARK_DRIVER_PYTHON=jupyter
+      - PYSPARK_DRIVER_PYTHON_OPTS="notebook --no-browser --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=''"
